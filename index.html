@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM User Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="atm-container">
+        <div class="atm-header">
+            <h1 id="welcomeTitle"> WELCOME TO SBI ATM </h1>
+        </div>
+
+        <div id="screen">
+            <div id="screenContent">
+                Please Enter Your 12-digit Account Number to begin.
+            </div>
+        </div>
+
+        <div id="menuSection" class="interaction-area hidden">
+            <div class="menu-column">
+                <button class="menu-button" onclick="showUserRegistration()">USER REGISTRATION</button>
+                <button class="menu-button" onclick="showDeposit()">DEPOSIT</button>
+                <button class="menu-button" onclick="showBalanceEnquiry()">BALANCE ENQUIRY</button>
+                <button class="menu-button" onclick="showChangePin()">CHANGE PIN</button>
+                <button class="menu-button exit-button" onclick="exitATM()">EXIT</button>
+            </div>
+            <div class="menu-column">
+                <button class="menu-button" onclick="showPinGeneration()">PIN GENERATION</button>
+                <button class="menu-button" onclick="showWithdraw()">WITHDRAW</button>
+                <button class="menu-button" onclick="showTransactionHistory()">TRANSACTION HISTORY</button>
+                <button class="menu-button" onclick="showMoneyTransfer()">MONEY TRANSFER</button>
+            </div>
+        </div>
+
+        <div id="keypadArea">
+            <div class="input-display" id="inputDisplay">
+                Account Number:
+            </div>
+            <div class="keypad">
+                <button class="key" onclick="pressKey('1')">1</button>
+                <button class="key" onclick="pressKey('2')">2</button>
+                <button class="key" onclick="pressKey('3')">3</button>
+                <button class="key" onclick="pressKey('4')">4</button>
+                <button class="key" onclick="pressKey('5')">5</button>
+                <button class="key" onclick="pressKey('6')">6</button>
+                <button class="key" onclick="pressKey('7')">7</button>
+                <button class="key" onclick="pressKey('8')">8</button>
+                <button class="key" onclick="pressKey('9')">9</button>
+                <button class="key" onclick="clearInput()">C</button>
+                <button class="key" onclick="pressKey('0')">0</button>
+                <button class="key" onclick="enterKey()">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
